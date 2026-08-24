@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wifi-sense"
+version = "0.1.0"
+description = "Local WiFi observation and RSSI-based presence sensing"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.110,<1",
+    "uvicorn[standard]>=0.29,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx>=0.27,<1",
+    "pytest>=8,<9",
+]
+
+[project.scripts]
+wifi-sense = "wifi_sense.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
