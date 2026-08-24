@@ -1,6 +1,6 @@
 # WiFi Sense
 
-Local Windows WiFi observation and RSSI-based motion/presence sensing.
+Local Windows WiFi observation and RSSI-based motion/presence sensing. Project is on standby until I get a better wifi card or something that works with 802.11bf
 
 ## Status
 
